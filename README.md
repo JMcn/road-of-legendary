@@ -15,11 +15,11 @@
 	* Atom
 	* Sublime Text
 	* Vim
-	* Visual Studio Code	
+	* Visual Studio Code
 
 ## 基础知识
 - Android
-	* 掌握Android开发基础技能	 
+	* 掌握Android开发基础技能
 - iOS
 	* 掌握iOS开发基础技能
 - Web
@@ -28,12 +28,12 @@
 	* 掌握api相关基础知识
 - 测试
 	* 掌握基本的测试用例设计方法和思想
-		
+
 ## 常见应用模式
 - Native
 - Hybrid
 - H5 App
-- ReactNative 
+- ReactNative
 
 ## 常用工具
 - Android
@@ -98,7 +98,7 @@
 - iOS
 	* OCUnit
 	* GHUnit
-	* XCTest 
+	* XCTest
 	* OCMock
 	* OCMockito
 	* Expecta
@@ -108,7 +108,7 @@
 - ReactNative
 - waxpatch/wax
 - ota
-		 
+
 ## 常用性能工具
 
 ### 抓包
@@ -182,14 +182,14 @@
 	* AndBug
 	* androguard
 	* Xposed
-		
+
 - iOS
 	* IDB
 	* iRET
 	* DVIA
 	* LibiMobileDevice
 	* otool
-	
+
 ## 覆盖率
 - Android
     - Jacoco
@@ -206,20 +206,20 @@
     - HotFix
     - RocooFix
     - DroidFix
-    - AndFix 
+    - AndFix
 - iOS
     - JSPatch
     - WaxPatch
 - ota
 - ReactNative
-- weex					
-			
+- weex
+
 ## abtest
 - AB Tester
 - AppAdhocOptimizer
 - Google Website Optimizer
 - Visual Website Optimizer
-	
+
 ## 常用灰度测试工具
 - testflight
 - 蒲公英
@@ -233,19 +233,17 @@
 
 ## 常用持续集成平台／相关工具
 - Jenkins
-- Travis CI 
+- Travis CI
 - Android
 	* mvn
 	* gradle
 - iOS
 	* xctool
 	* Cocoapods
-	 
-		
+
 ## 多语言开发应用
 - SL4A
 - gomobile
-			
 
 ## 多设备远程管理平台
 - STF
@@ -260,6 +258,106 @@
 - 交互设计/可用性/可访问性知识
 - 快速的学习能力
 
+--------
+参考[测试体系](https://testerhome.com/topics/2940)
+
+#测试技术
+
+## 云测服务使用
+- mtc
+- testin
+- fir
+- mqc
+
+## UI自动化
+- appium
+- capybara
+- selenium
+- phantomjs(推荐)
+
+## 接口测试
+- 框架选择
+	* soapui
+	* capybara-json
+	* gatling
+	* 参考他的集成测试例子
+- fake server
+- 分析工具
+	* fiddler(貌似是唯一可自动解码工具)
+	* soapui
+	* em-proxy
+	* 自定义代理
+- 单元测试
+	* 研发推进, 仅作支持
+	* 持续集成结合
+	* 静态扫描
+		- findbugs
+
+## 性能测试
+- 负载测试
+- 加压工具
+	* gatling
+	* ab
+	* jmeter
+- 监控平台
+	* influxdb+grafana
+	* ELK
+	* nmon(不推荐)
+- 性能剖析
+	* byteman
+	* btrace
+	* 火焰图
+		- perfj
+		- systemtap
+## 测试分析体系
+- 覆盖率
+	* jacoco
+- 流程建模
+	* 根据byteman构建思维导图
+- 代码diff
+	* 思维导图红黑线diff
+	* dot绘图
+- debug与trace
+
+## 研发流程
+- jenkins持续集成
+	* 自动构建
+		- 发布包构建
+		- docker镜像构建
+	* 自动编译
+	* 自动静态扫描
+	* 单测
+	* 部署
+	* 性能测试
+	* 接口测试
+	* UI测试
+	* 报警机制
+		- 大job收集所有子job的结果
+		- 邮件提醒为主
+- 手工测试
+	* 新功能测试
+	* 预发布环境
+	* 预演环境
+		- testerhome的引流
+- 开发模式
+	* 分支开发主干发布
+	* 基于每个分支构建对应的持续集成job
+	* 发布版本从tag中获取
+	* 持续集成监控tag
+
+## 测试环境
+- 手工部署
+- 自动化部署
+	* docker
+		- 基础镜像可以手工构建
+		- 给每个容器分配独立的ip
+	* vagrant
+	* vmware virtualbox
+
+##线上环境
+- 接口版本化
+- 灰度发布
+- 流量旁路
 
 # 翻译计划
 robotframework 官方文档
