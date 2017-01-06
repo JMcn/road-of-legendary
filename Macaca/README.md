@@ -13,6 +13,8 @@ Python Client binding for Macaca https://macacajs.github.io/wd.py
 # requirements
 * [python 2.7](https://www.python.org/) - 开发语言
 * [wd](https://github.com/macacajs/wd.py)==0.1.5 Macaca python库
+* pytest==2.9.0
+* pytest-allure-adaptor==1.7.6
 
 # 环境配置
 ## 安装 Node.js
@@ -156,7 +158,9 @@ driver.init(desiredCaps);
 
 ## allure 工具配置
 安装pytest：`pip install pytest`
+
 安装pip库：`pip install pytest-allure-adaptor`
+
 [allure 压缩包](https://github.com/allure-framework/allure1/releases)解压，将/bin/allure 加入环境变量
 
 # 项目运行
