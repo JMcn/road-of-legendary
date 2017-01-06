@@ -1,6 +1,7 @@
 #coding=utf-8
 import unittest
 import time
+import allure
 from macaca import WebDriver
 import os
 import setting
@@ -19,6 +20,7 @@ class PregnancyTest(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
 
+    @allure.step(u'允许权限')
     def test_00_allow(self):
         try:
             self.driver.element_by_name("Allow").click()
@@ -33,6 +35,7 @@ class PregnancyTest(unittest.TestCase):
         except:
             pass
 
+    @allure.step(u'启动页滑动')
     def test_01_login_swipe(self):
         self.driver.wait_for_element('xpath', '//XCUIElementTypePageIndicator[1]')
         for i in range(1, 5):
@@ -46,6 +49,7 @@ class PregnancyTest(unittest.TestCase):
             self.driver.wait_for_element('name', u"已有账号，立即登录")
             self.driver.element('name', u"已有账号，立即登录").click()
 
+    @allure.step(u'登录账号')
     def test_02_login(self):
         login = u"登录"
         self.driver.wait_for_element('xpath', "//XCUIElementTypeButton[@name='" + login + "']")
@@ -57,9 +61,13 @@ class PregnancyTest(unittest.TestCase):
         time.sleep(3)
         try:
             self.driver.element_by_name('homePopupClose').click()
+            self.driver.element_by_name(u"取消").click()
             self.driver.element_by_name(u"我的").click()
         except:
             pass
+
+    @allure.step(u'退出账号')
+    def test_03_logout(self):
         self.driver.element_by_name(u"圈子").click()
         self.driver.element_by_name(u"记录").click()
         self.driver.element_by_name(u"发现").click()

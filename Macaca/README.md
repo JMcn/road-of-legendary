@@ -150,8 +150,26 @@ driver.init(desiredCaps);
 | autoAcceptAlerts | Boolean | 自动接受所有的系统弹窗信息。默认是 false。|
 | autoDismissAlerts | Boolean | 自动拒绝所有的系统弹窗信息。默认是 false。|
 
+# allure
+## 用例修饰
+添加 allure 装饰器的标记，用法参考：[allure-python](https://github.com/allure-framework/allure-python)
+
+## allure 工具配置
+安装pytest：`pip install pytest`
+安装pip库：`pip install pytest-allure-adaptor`
+[allure 压缩包](https://github.com/allure-framework/allure1/releases)解压，将/bin/allure 加入环境变量
+
 # 项目运行
+用例执行：
 ```
 $ macaca server --verbose
-$ python login.py
+$ py.test login.py --alluredir result
 ```
+
+生成allure报告并查看：
+```
+$ allure generate result
+$ allure report open
+```
+
+在jenkins中集成，使用 [Allure Jenkins Plugin](http://wiki.qatools.ru/display/AL/Allure+Jenkins+Plugin)

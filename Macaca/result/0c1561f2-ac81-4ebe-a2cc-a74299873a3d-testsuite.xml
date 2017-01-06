@@ -1,0 +1,74 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1483701073409" stop="1483701458510">
+  <name>login_pytest</name>
+  <test-cases>
+    <test-case start="1483701073409" status="passed" stop="1483701297296">
+      <name>TestPregnancy.test_01_login_swipe</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7382-MainThread"/>
+        <label name="host" value="JaydeMacBook-Pro.local"/>
+      </labels>
+      <attachments/>
+      <steps>
+        <step start="1483701228879" status="passed" stop="1483701297295">
+          <title>启动页滑动</title>
+          <name>启动页滑动</name>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1483701297304" status="passed" stop="1483701298539">
+      <name>TestPregnancy.test_00_allow</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7382-MainThread"/>
+        <label name="host" value="JaydeMacBook-Pro.local"/>
+      </labels>
+      <attachments/>
+      <steps>
+        <step start="1483701297305" status="passed" stop="1483701298539">
+          <title>允许权限</title>
+          <name>允许权限</name>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1483701298540" status="passed" stop="1483701331964">
+      <name>TestPregnancy.test_02_login</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7382-MainThread"/>
+        <label name="host" value="JaydeMacBook-Pro.local"/>
+      </labels>
+      <attachments/>
+      <steps>
+        <step start="1483701298540" status="passed" stop="1483701331963">
+          <title>登录账号</title>
+          <name>登录账号</name>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1483701331965" status="passed" stop="1483701458510">
+      <name>TestPregnancy.test_03_logout</name>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7382-MainThread"/>
+        <label name="host" value="JaydeMacBook-Pro.local"/>
+      </labels>
+      <attachments/>
+      <steps>
+        <step start="1483701331966" status="passed" stop="1483701458510">
+          <title>退出账号</title>
+          <name>退出账号</name>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+  <labels/>
+</ns0:test-suite>
