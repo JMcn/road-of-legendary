@@ -1,0 +1,50 @@
+*** Settings ***
+Documentation    h5 by chrome
+Library          AppiumLibrary
+Test Setup       Open App
+Test Teardown    close application
+
+# appium==1.5.3  chrome.apk==50.0.2661.89
+# http://www.apkmirror.com/wp-content/uploads/uploaded/571e8284bc074/com.android.chrome_50.0.2661.89-266108901_minAPI21(armeabi-v7a)(nodpi).apk
+
+*** Variables ***
+${REMOTE_URL}         http://127.0.0.1:4723/wd/hub
+${PLATFORM_NAME}      Android
+${PLATFORM_VERSION}   5.1
+${DEVICE_NAME}        71MBBL622933
+${BROWSER_NAME}       Chrome
+${APP_PACKAGE}        com.android.chrome
+${APP_ACTIVITY}       com.android.chromecom.google.apps.chrome.Main
+
+*** Test Cases ***
+访问soweb页
+    go to url    http://m.so.com
+    input text    id=q    chrome
+    click element    class=search-btn
+    capture page screenshot
+
+
+搜索
+    go to url    http://m.beta.mgtv.com/#/search
+    input text    id=mg_search_input    快乐大本营
+    input text    id=mg_search_input    ${\n}
+    # press keycode    66   # 回车
+    wait until page contains    快乐大本营2016
+    capture page screenshot
+
+播放和暂停
+    go to url    http://m.beta.mgtv.com/#/b/290346/3664551
+    sleep    5s
+    capture page screenshot
+
+
+
+*** Keywords ***
+Open App
+    Open Application    ${REMOTE_URL}   platformName=Android    platformVersion=${PLATFORM_VERSION}
+    ...    deviceName=${DEVICE_NAME}    browserName=${BROWSER_NAME}   appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
+    ...    noSign=true    unicodeKeyboard=true    resetKeyboard=true    noReset=true
+    log    "\${REMOTE_URL}="${REMOTE_URL},"\${PLATFORM_VERSION}="${PLATFORM_VERSION},"\${DEVICE_NAME}="${DEVICE_NAME},"\${BROWSER_NAME}="${BROWSER_NAME},"\${APP_PACKAGE}="${APP_PACKAGE}
+    set appium timeout    20s
+
+

@@ -1,0 +1,19 @@
+*** Settings ***
+Documentation     webview
+Default Tags      webview
+Resource          ..${/}关键字${/}APP初始化关键字.txt
+Suite Setup    打开APP
+Suite Teardown    关闭APP
+
+*** Test Cases ***
+webview
+    sleep     5s
+    tap    id=cn.mama.pregnant:id/discover
+    sleep     5s
+    wait until page contains    母婴商城
+    click element    xpath=//*[contains(@text,'母婴商城')]
+    sleep     10s
+    get contexts
+    switch to context    WEBVIEW_cn.mama.pregnant
+    click element     xpath=//*[@id='J_linkWall']/a[1]
+    sleep    5s
