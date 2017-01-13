@@ -70,8 +70,8 @@
 	* Selendroid
 	* Calabash*Android
 	* monkeytalk
-	* Appium
-	* Espresso
+	* Appium  √	
+   * Espresso
 	* cafe
 - iOS
 	* UIAutomation(旧)
