@@ -367,9 +367,9 @@ robotframework 官方文档
 备选书单：
 技术类：
 
-0. Python学习手册(第4版)
-0. 失控
-0. 深入理解Android自动化测试
+0. Python学习手册(第4版)  -在读
+0. 失控  -在读
+0. 深入理解Android自动化测试  -在读
 0. Android应用测试与调试实战
 0. 移动App性能评测与优化
 0. 腾讯Android自动化测试实战
