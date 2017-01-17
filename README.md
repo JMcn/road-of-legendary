@@ -85,8 +85,8 @@
 	* Calabash*iOS
 	* TuneupJs
 	* ynm3k
-- Appium
-- Macaca
+- Appium  √
+- Macaca  √
 
 
 ## 常用单元测试框架
