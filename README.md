@@ -78,7 +78,7 @@
 	* XCUITesting
 	* KIF
 	* Frank
-	* Appium
+	* Appium  √
 	* ios-driver
 	* Mechanic.js
 	* monkeytalk
